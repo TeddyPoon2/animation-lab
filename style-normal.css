@@ -10,12 +10,12 @@ body {
   overflow: hidden;
   /*task 1 (done)*/
   /*please research what is overflow and why do we need to use it here.*/
+
   /* overflow attribute 決定是否於當前container外顯示內部element, 
-	此處使用hidden因為不想在當前container(道路)外顯示多餘的圖片, 免去微調位置的麻煩*/
+	此處使用hidden是因為不想在當前container(道路)外顯示多餘的圖片, 免去微調位置的麻煩*/
 }
 
 /*additional car movement*/
-
 @keyframes move-car {
   100% {
     transform: scaleY(1.1);
@@ -67,7 +67,7 @@ body {
 /*task5: give it a name*/
 
 @keyframes move-grass {
-  /* it should come from the right to the left */
+  /* it should come from the right to the left (done)*/
   from {
     transform: translateX(0);
   }
@@ -79,7 +79,7 @@ body {
 #grass {
   width: 5%;
   position: absolute;
-  right: -60%;
+  right: -70%;
   bottom: -1%;
   z-index: 3;
   animation-name: move-grass;
@@ -89,7 +89,8 @@ body {
 }
 
 @keyframes move-tree {
-  /*task 7: same for the mountain*/
+  /*task 7: same for the mountain
+  (done)*/
   from {
     transform: translateX(0);
   }
@@ -104,10 +105,23 @@ body {
   right: -30%;
   position: absolute;
   /*please fill in the appropriate setting
-	Also i want it to start 2 seconds after the animation starts.*/
+	Also i want it to start 2 seconds after the animation starts.
+  (done)*/
   animation-name: move-tree;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-delay: 2s;
+  z-index: 1;
+}
+
+#sec-tree {
+  width: 15%;
+  bottom: 0;
+  right: -30%;
+  position: absolute;
+  animation-name: move-tree;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 6s;
   z-index: 1;
 }
